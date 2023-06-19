@@ -6,7 +6,7 @@
 .card img {
     width: 100%;
     display: block;
-    border: 2px solid #ffffff;
+    /* border: 2px solid #ffffff; */
     border-radius: 6px;
 }
 
@@ -18,7 +18,7 @@
 
 .flipped .front {
     transform: rotateY(0deg);
-    background: #111;
+    /* background: #111; */
     transition-delay: 0.2s;
 }
 

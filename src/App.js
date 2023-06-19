@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Header from "./components/header";
 import SingleCard from "./components/singleCard.jsx";
 import backImg from "./assets/cover.png";
 import Img1 from "./assets/img_1.png";
@@ -30,8 +31,8 @@ function App() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
 
-    setChoiceOne(null)
-    setChoiceTwo(null)
+    setChoiceOne(null);
+    setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
   };
@@ -73,29 +74,33 @@ function App() {
   };
 
   useEffect(() => {
-    shuffleCards()
-  },[])
+    shuffleCards();
+  }, []);
 
   // console.log(cards, turns);
 
   return (
-    <div className="App">
-      <h1>Memory Game</h1>
-      <button onClick={shuffleCards}>new game</button>
-      <div className="card-grid">
-        {cards.map((card) => (
-          <SingleCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
-            backImg={backImg}
-          />
-        ))}
+    <>
+      <Header />
+      <div className="App">
+        {/* <h1>Memory Game</h1> */}
+        <div className="card-grid">
+          {cards.map((card) => (
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              disabled={disabled}
+              backImg={backImg}
+            />
+          ))}
+        </div>
+        {/* <p>Turns: {turns}</p> */}
       </div>
-      <p>Turns: {turns}</p>
-    </div>
+      <button className="new-game-btn" onClick={shuffleCards}>New Game</button>
+
+    </>
   );
 }
 

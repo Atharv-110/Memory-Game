@@ -8,6 +8,15 @@
 
 }
 
+html.swal2-height-auto {
+  height: 100vh;
+}
+
+body.swal2-height-auto {
+  /* position: absolute; */
+  height: 100vh !important;
+}
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -24,9 +33,24 @@ body {
   color: #fff;
   background-image: url(./assets/Fence.png), url(./assets/Fence.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: 120% bottom, -150px bottom;
+  background-position: 111% bottom, -150px bottom;
   background-size: 300px auto, 300px auto;
 }
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-position: 120% bottom, -150px bottom;
+  } 
+}
+
+
+
+
 
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

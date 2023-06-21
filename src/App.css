@@ -8,6 +8,111 @@
 
 }
 
+/* Style for Desktops */
+.App {
+  /* max-width: 900px; */
+  width: 100%;
+  margin: 20px auto;
+  /* height: 100vh; */
+}
+
+.new-game-btn {
+  position: relative;
+  top: 80px;
+  cursor: pointer;
+  /* margin-top: px; */
+  background: var(--gradient-1);
+  /* border: 2px solid #fff; */
+  border: none;
+  outline: none;
+  padding: 20px 60px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.new-game-btn:hover {
+  /* background: #dfdf; */
+  /* color: black; */
+}
+
+.card-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px 25px;
+}
+
+/* Header CSS */
+.header {
+  width: 100%;
+  /* z-index: 999; */
+  margin: auto;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  /* flex-direction: ; */
+}
+
+.game-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--pink1);
+}
+
+.pause-btn {
+  /* margin-top: 20px; */
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.pause-btn:hover {
+  transform: scale(0.9);
+}
+
+
+.pause-btn i {
+  color: #000000;
+}
+
+.left {
+  background: none;
+  width: 15%;
+}
+
+.middle {
+  width: 70%;
+  text-align: center;
+}
+
+.right {
+  width: 15%;
+  /* border-radius: 50%; */
+  /* background: var(--pink1); */
+  display: flex;
+  justify-content: center;
+}
+
+.timer-count {
+  color: var(--violet);
+}
+
+
+
+
+
+
 
 /* Styles for all tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -15,6 +120,7 @@
 
 
   .App {
+    /* position: fixed; */
     /* max-width: 900px; */
     width: 100%;
     margin: 20px auto;
@@ -23,7 +129,7 @@
 
   .new-game-btn {
     position: relative;
-    top: 50px;
+    /* top: px; */
     cursor: pointer;
     /* margin-top: px; */
     background: var(--gradient-1);
@@ -48,7 +154,7 @@
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 15px 20px;
+    grid-gap: 20px 20px;
   }
 
   /* Header CSS */
@@ -74,6 +180,7 @@
   }
 
   .pause-btn {
+    /* margin-top: ; */
     font-size: 3rem;
     border: none;
     outline: none;

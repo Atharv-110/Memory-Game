@@ -16,6 +16,8 @@ export default function Header() {
   // const [initialTime, setTime] = useState(60);
 
   const handlePause = () => {
+    const body = document.querySelector("body")
+    
     setPlaying(false)
     // console.log("Paused")
     Swal.fire({
@@ -34,6 +36,7 @@ export default function Header() {
         setPlaying(true)
       }
     })
+    body.classList.remove("swal2-height-auto")
   }
   
   return (

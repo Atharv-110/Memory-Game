@@ -8,12 +8,13 @@
 
 }
 
+
 /* Style for Desktops */
 .App {
   /* max-width: 900px; */
+  /* position: sticky; */
   width: 100%;
   margin: 20px auto;
-  /* height: 100vh; */
 }
 
 .new-game-btn {

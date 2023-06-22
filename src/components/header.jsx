@@ -13,13 +13,10 @@ import "../App.css";
 export default function Header() {
 
   const [isPlaying, setPlaying] = useState(true);
-  // const [initialTime, setTime] = useState(60);
-
   const handlePause = () => {
     const body = document.querySelector("body")
     
     setPlaying(false)
-    // console.log("Paused")
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -34,13 +31,16 @@ export default function Header() {
         setPlaying(true)
       } else {
         setPlaying(true)
+
+        // setReset(true)
       }
     })
     body.classList.remove("swal2-height-auto")
   }
   
   return (
-    <div className="header">
+    <>
+    <div className="header" num="num">
       <div className="left">
         <button onClick={handlePause} className="pause-btn">
           <i className="fa-solid fa-pause"></i>
@@ -54,6 +54,7 @@ export default function Header() {
         <CountdownCircleTimer
           isPlaying={isPlaying}
           duration={60}
+          // initialRemainingTime={63}
           colors={"#000000"}
         //   colorsTime={[60, 30]}
           size={65}
@@ -64,5 +65,6 @@ export default function Header() {
         </CountdownCircleTimer>
       </div>
     </div>
+    </>
   );
 }

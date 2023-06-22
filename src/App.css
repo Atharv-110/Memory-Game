@@ -109,7 +109,86 @@
   color: var(--violet);
 }
 
+/* Summary Card Styles */
+.summary-card {
+  width: 450px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 50px 12px #00000040;
+  color: #500886;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.summary-card .score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.summary-card .score img {
+  width: 70px;
+  height: 70px;
+}
+
+.summary-card .score img:nth-child(1) {
+  transform: scaleX(-1);
+}
+
+.summary-card .score .score-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #2BDC5D;
+}
+
+.summary-card .score .score-text p {
+  font-size: 13px;
+  color: #888686;
+}
+
+.summary-card .stats {
+  display: flex;
+  /* margin: 20px 0; */
+  justify-content: space-around;
+}
+
+.summary-card .stats p {
+  color: #1E1E1E;
+  font-size: 17px;
+}
+
+.summary-card .stats h3 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.summary-card .stats h3 span {
+  font-size: 15px;
+}
+
+.summary-card .score-note {
+  /* padding: 1rem 5rem; */
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1E1E1E;
+}
+
+.summary-card button {
+  width: fit-content;
+  margin: 0 auto;
+  background: var(--gradient-1);
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
 
 
 

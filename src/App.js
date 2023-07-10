@@ -3,6 +3,7 @@ import "./App.css";
 // import Header from "./components/header";
 import Game from "./components/game";
 import Summary from "./components/summary";
+import Instruction from "./components/instruction";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import { useState } from "react";
@@ -12,7 +13,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Game />} />
+          <Route exact path="/" element={<Instruction />} />
+          <Route exact path="/game" element={<Game />} />
           <Route exact path="/summary" element={<Summary />} />
         </Routes>
       </BrowserRouter>
